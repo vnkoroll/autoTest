@@ -5,7 +5,7 @@ import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import javax.xml.soap.SOAPPart;
 
 /**
- * Created by Admin on 25.03.15.
+ if and else
  */
 public class main2 {
     public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class main2 {
         }
 */
 
-        if (args[0].equals("Hello") && args[1].equals("Class"))
+      /* if (args[0].equals("Hello") && args[1].equals("Class"))
         {
                 System.out.println("Succes");
         }
@@ -28,6 +28,21 @@ public class main2 {
         else {
             System.out.println("Good bay");
         }
+*/
+
+       /* int a = 10;
+        while (a < 15) {
+            System.out.println("a is"+a);
+            a++;
+        }
+        System.out.println("While is over");
+*/
+        int a = 10;
+        while (true){
+            if (a>15){break;}
+            a++;
+        }
+        System.out.println("While is over");
 
 
 
