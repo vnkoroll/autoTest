@@ -1,7 +1,7 @@
 package com.company;
 
 /**
- * Created by Max on 28.03.2015.
+ * Created by vova on 28.03.2015.
  */
 public class homework3 {
     public static void main(String[] args) {
