@@ -1,4 +1,6 @@
-package com.company;
+package com.company.construction;
+
+import com.company.construction.TestClass;
 
 /**
  * Created by vkorol on 3/31/2015.
