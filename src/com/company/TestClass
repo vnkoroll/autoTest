@@ -1,0 +1,18 @@
+package com.company;
+
+/**
+ * Created by vkorol on 3/31/2015.
+ */
+public class TestClass {
+    public String say;
+    public String update;
+
+
+
+    public TestClass(String c) { //constructor
+        say = c;
+    }
+
+
+
+}
