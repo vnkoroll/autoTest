@@ -16,6 +16,7 @@ String [] s= {"Hello","Class","."};
 System.out.println (f.get(0));
         System.out.println (f.get(1));
         System.out.println (f.get(2));
+        //System.out.println (f.size());
 
 
 
