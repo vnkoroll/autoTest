@@ -25,6 +25,9 @@ public class AngelNet {
 
         System.out.println (a); //выводит пароль
 
+        //проверяет правильный ли результат
+
+
         h.quit(); //закрыть Хроме
 
 
