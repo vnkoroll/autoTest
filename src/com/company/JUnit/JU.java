@@ -6,7 +6,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-
 /**
  * Created by Admin on 08.04.15.
  */
@@ -21,6 +20,6 @@ public class JU {
         int a = 10;
         int b = 6;
         int expectedResult = 15;
-        Assert.assertEquals(expectedResult, a + b);
+        Assert.assertEquals("Expected result didn't match", expectedResult, a + b);
     }
 }
