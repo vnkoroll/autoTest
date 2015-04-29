@@ -30,8 +30,10 @@ public class GoogleTranslate {
     public String title (){
         dr.getTitle();
         return dr.getTitle();
-
     }
+    //public void resultBox (){
+        //dr.findElement(By.xpath("//*[@id='result_box']"));
+    //}
 
     @Before
     public void before ()
@@ -57,6 +59,7 @@ public class GoogleTranslate {
         String expectedResult = "Переводчик Google";
         Assert.assertEquals(expectedResult, dr.getTitle());
     }
+
 
 
     @After //чтобы браузер закрылся независимо от результатов
