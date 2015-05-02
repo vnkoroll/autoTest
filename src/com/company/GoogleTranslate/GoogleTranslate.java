@@ -1,6 +1,5 @@
 package com.company.GoogleTranslate;
 
-import com.thoughtworks.selenium.webdriven.commands.Click;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -8,7 +7,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -31,10 +29,20 @@ public class GoogleTranslate {
         dr.getTitle();
         return dr.getTitle();
     }
-    //public void resultBox (){
-        //dr.findElement(By.xpath("//*[@id='result_box']"));
-    //}
+    public void RightResultBox (){
+        dr.findElement(By.xpath("//*[@id='result_box']"));
+    }
 
+    public void LeftResultBox (){
+    dr.findElement(By.xpath("//*[@id='gt-src-wrap']"));
+    }
+
+    public void selectLenguage (){
+        dr.findElement(By.xpath("//*[@id='gt-src-wrap']")).click();
+        dr.findElement(By.xpath ("//div [text()="греческий"]"));
+        dr.findElement (By.xpath ("//div [text()="мальтийский"]"));
+    }
+    
     @Before
     public void before ()
     {

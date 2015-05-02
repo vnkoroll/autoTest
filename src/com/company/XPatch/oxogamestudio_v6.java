@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 @RunWith(JUnit4.class) // for import JUnit для запуска функций как тесты
 public class oxogamestudio_v6 {
-    public WebDriver dr; // for @After пишем эту строку
+    public WebDriver  dr; // for @After пишем эту строку
 
     //прописываем функции
     //void ничего не возвращает

@@ -1,15 +1,10 @@
 <component name="libraryTable">
   <library name="libs">
     <CLASSES>
-      <root url="file://C:/Automation/selenium-2.44.0/libs" />
-      <root url="file://C:/Automation/selenium-2.44.0" />
+      <root url="file://$PROJECT_DIR$/../selenium-2.44.0/libs" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="file://C:/Automation/selenium-2.44.0" />
-    </SOURCES>
-    <jarDirectory url="file://C:/Automation/selenium-2.44.0" recursive="false" />
-    <jarDirectory url="file://C:/Automation/selenium-2.44.0/libs" recursive="false" />
-    <jarDirectory url="file://C:/Automation/selenium-2.44.0" recursive="false" type="SOURCES" />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../selenium-2.44.0/libs" recursive="false" />
   </library>
 </component>

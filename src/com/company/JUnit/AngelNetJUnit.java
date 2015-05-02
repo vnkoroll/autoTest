@@ -1,4 +1,5 @@
 package com.company.JUnit;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -8,8 +9,8 @@ import org.junit.runners.JUnit4;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 /**
  * Created by Admin on 08.04.15.
  */
@@ -37,8 +38,7 @@ public WebDriver dr; // for @After пишем эту строку
     @Before
     public void before ()
     {
-        System.setProperty("webdriver.chrome.driver",
-                "C:/Automation/chromedriver.exe"); //прописывает параметры и путь к Хроме драйверу.
+        final String s = System.setProperty("webdriver.chrome.driver", "C:/Automation/chromedriver.exe");//прописывает параметры и путь к Хроме драйверу.
         dr = new ChromeDriver(); //запускает драйвер
         dr.manage().window().maximize();//на весь экран открыть браузер
         dr.get("http://angel.net/~nic/passwd.current.html");
