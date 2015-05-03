@@ -15,11 +15,13 @@ public class TestHelper {
         System.setProperty("webdriver.chrome.driver",
                 "C:/Automation/chromedriver.exe"); //прописывает параметры и путь к Хроме драйверу.
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--lang=ru");
+        options.addArguments("--lang=ua");
         dr = new ChromeDriver(); //запускает драйвер
         dr.manage().window().maximize();//на весь экран открыть браузер
-        dr.get("https://translate.google.com");
+        dr.get("https://translate.google.com.ua");
     }
+
+
     }
 
 

@@ -36,6 +36,7 @@ public class GoogleTranslate {
     }
 
     String Hello = "Hello";
+    String ukrWord = "С У!";
 
     public String getTextRightBox (){
         String getText1 = TestHelper.dr.findElement(By.xpath("//span[@id='result_box']//span")).getText();
@@ -68,7 +69,7 @@ public class GoogleTranslate {
 
 //5. Нажать на стрелочку язьіков проверить наличие Греческого, Мальтийского и Словацкого
     @Test
-    public void test3 () throws InterruptedException {
+    public void test5 () throws InterruptedException {
         TestHelper.dr.findElement(By.xpath("//div[@id='gt-sl-gms']")).click();
         Thread.sleep(2000);
         TestHelper.dr.findElement(By.xpath ("//div [text()='греческий']"));
@@ -80,7 +81,7 @@ public class GoogleTranslate {
 
     //8. Слева поставить Spanish, справа English, ввести слева Hello, нажать <>, проверить что справа стало hola
     @Test
-    public void test4 () throws InterruptedException {
+    public void test8 () throws InterruptedException {
         TestHelper.dr.findElement(By.xpath("//*[@id='gt-tl-gms']")).click();
         TestHelper.dr.findElement(By.xpath ("//div [text()='испанский']")).click();
         TestHelper.dr.findElement(By.xpath("//div[@id='gt-sl-gms']")).click();
@@ -97,7 +98,26 @@ public class GoogleTranslate {
 
     }
 //9. Вводим слева Hello, нажимаем X, проверяем что слева и справа пусто.
-// 10. Вьібираем слева Укр, справа Китайский, вводим слева С У! Г С!, пр перевод.
+@Test
+public void test9 () throws InterruptedException {
+    TestHelper.dr.findElement(By.xpath("//*[@id='source']")).sendKeys(Hello);
+    Thread.sleep(3000);
+    TestHelper.dr.findElement(By.xpath ("//*[@id='gt-clear']")).click();
+    Thread.sleep(3000);
+ //как проверить что поля пустые????????????????????????????????????????????????????
+
+}
+// 10. Вьібираем слева Укр, справа Китайский, вводим слева С У! Г С!, проверить перевод.
+@Test
+public void test10 () throws InterruptedException {
+
+    TestHelper.dr.findElement(By.xpath("//div[@id='gt-lang-src']/div[2]")).click();
+    TestHelper.dr.findElement(By.xpath ("//div[text()='украинский']")).click();
+    Thread.sleep(3000);
+
+ //???????????????????????????????????????????????????????????????????????????????????
+
+}
 
     @After //чтобы браузер закрылся независимо от результатов
     public void quitBrowser () {
