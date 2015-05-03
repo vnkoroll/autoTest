@@ -63,6 +63,9 @@ public class GoogleTranslate {
         Assert.assertEquals(expectedResult, TestHelper.dr.getTitle());
     }
 
+//3. Проверить наличие левого и правого полей и кнопки Транслейт.
+//4. Проверить что в правое поле не добавляется текст.
+
 //5. Нажать на стрелочку язьіков проверить наличие Греческого, Мальтийского и Словацкого
     @Test
     public void test3 () throws InterruptedException {
@@ -72,6 +75,8 @@ public class GoogleTranslate {
         TestHelper.dr.findElement (By.xpath ("//div [text()='мальтийский']"));
         TestHelper.dr.findElement (By.xpath ("//div [text()='словацкий']"));
     }
+//6. Ввести Hello в левое поле, нажать Translate проверить наличие кнопки прослушки.
+//7. Открьій ссьілку https://translate.google.com/#auto/en/Hello, проверить что слева Hello, справа перевод.
 
     //8. Слева поставить Spanish, справа English, ввести слева Hello, нажать <>, проверить что справа стало hola
     @Test
@@ -91,6 +96,8 @@ public class GoogleTranslate {
         Thread.sleep(7000);
 
     }
+//9. Вводим слева Hello, нажимаем X, проверяем что слева и справа пусто.
+// 10. Вьібираем слева Укр, справа Китайский, вводим слева С У! Г С!, пр перевод.
 
     @After //чтобы браузер закрылся независимо от результатов
     public void quitBrowser () {
