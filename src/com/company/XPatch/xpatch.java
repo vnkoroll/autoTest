@@ -15,6 +15,7 @@ public class xpatch {
     //book[count(name)=2] найти книгу у которой количество name=2
     //title[text()='hi']/following::shell[1]
  //tr[2]/td/input
+ //div[contains(@class, 'jfk-button')] - если много классов и они постоянно меняются
  */
 
 }
