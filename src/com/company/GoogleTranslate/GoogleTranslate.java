@@ -15,7 +15,6 @@ import org.openqa.selenium.WebDriver;
 @RunWith(JUnit4.class) // for import JUnit для запуска функций как тесты
 public class GoogleTranslate {
     public WebDriver dr; // for @After пишем эту строку
-
     //прописываем функции
     //void ничего не возвращает
 
@@ -65,7 +64,20 @@ public class GoogleTranslate {
     }
 
 //3. Проверить наличие левого и правого полей и кнопки Транслейт.
+@Test
+public void test21 ()  {
+    Assert.assertTrue(TestHelper.dr.findElement(By.xpath("//*[@class='gt-hl-layer short_text']")).isDisplayed()); //проверка что левое окно есть
+    Assert.assertTrue(TestHelper.dr.findElement(By.xpath("//span[@id='result_box']")).isDisplayed()); //проверка что правое окно есть
+    Assert.assertTrue(TestHelper.dr.findElement(By.xpath("//*[@id='gt-lang-submit']")).isDisplayed()); //проверка что кнопка есть
+}
+
+
 //4. Проверить что в правое поле не добавляется текст.
+@Test
+public void test22 ()  {
+    //TestHelper.dr.get("https://google.com.ua");
+            Assert.assertEquals("span", TestHelper.dr.findElement(By.xpath("//span[@id='result_box']")).getTagName());
+}
 
 //5. Нажать на стрелочку язьіков проверить наличие Греческого, Мальтийского и Словацкого
     @Test
@@ -92,9 +104,9 @@ public class GoogleTranslate {
         TestHelper.dr.findElement(By.xpath("//*[@id='source']")).sendKeys(Hello);
         clickButton();
         String ExpectedResult = "¡Hola";
+        Thread.sleep(3000);
         Assert.assertEquals (ExpectedResult, getTextRightBox());
-
-        Thread.sleep(7000);
+        Thread.sleep(3000);
 
     }
 //9. Вводим слева Hello, нажимаем X, проверяем что слева и справа пусто.
