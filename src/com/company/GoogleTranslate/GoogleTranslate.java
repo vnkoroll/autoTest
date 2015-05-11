@@ -29,13 +29,12 @@ public class GoogleTranslate {
     public void RightResultBox (){
         TestHelper.dr.findElement(By.xpath("//*[@id='result_box']"));
     }
-
     public void LeftResultBox (){
         TestHelper.dr.findElement(By.xpath("//*[@id='gt-src-wrap']"));
     }
 
     String Hello = "Hello";
-    String ukrWord = "С У!";
+    String ukrWord = "Слава Украине!";
 
     public String getTextRightBox (){
         String getText1 = TestHelper.dr.findElement(By.xpath("//span[@id='result_box']//span")).getText();
@@ -89,7 +88,25 @@ public void test22 ()  {
         TestHelper.dr.findElement (By.xpath ("//div [text()='словацкий']"));
     }
 //6. Ввести Hello в левое поле, нажать Translate проверить наличие кнопки прослушки.
+@Test
+public void test6 () throws InterruptedException {
+    TestHelper.dr.findElement(By.xpath("//*[@id='source']")).sendKeys(Hello);
+    //clickButton();
+    Thread.sleep(2000);
+    Assert.assertTrue(TestHelper.dr.findElement(By.xpath("//div[@id='gt-res-listen']")).isDisplayed()); //проверка что кнопка прослушки есть
+    Thread.sleep(2000);
+    TestHelper.dr.findElement(By.xpath("//div[@id='gt-res-listen']")).click(); //нажатие на кнопку прослушки
+    Thread.sleep(2000);
+}
+
+
 //7. Открьій ссьілку https://translate.google.com/#auto/en/Hello, проверить что слева Hello, справа перевод.
+@Test
+public void test7 () throws InterruptedException {
+/////////////////////////////////////////////////////////////////////
+    Thread.sleep(2000);
+
+}
 
     //8. Слева поставить Spanish, справа English, ввести слева Hello, нажать <>, проверить что справа стало hola
     @Test
@@ -122,9 +139,17 @@ public void test9 () throws InterruptedException {
 // 10. Вьібираем слева Укр, справа Китайский, вводим слева С У! Г С!, проверить перевод.
 @Test
 public void test10 () throws InterruptedException {
+    TestHelper.dr.findElement(By.xpath("//div[@id='gt-sl-gms']")).click();
+    TestHelper.dr.findElement(By.xpath ("//div [text()='украинский']")).click();
+    TestHelper.dr.findElement(By.xpath("//*[@id='gt-tl-gms']")).click();
+    TestHelper.dr.findElement(By.xpath ("//div [text()='китайский(традиционный)']")).click();
+    Thread.sleep(2000);
 
-    TestHelper.dr.findElement(By.xpath("//div[@id='gt-lang-src']/div[2]")).click();
-    TestHelper.dr.findElement(By.xpath ("//div[text()='украинский']")).click();
+    TestHelper.dr.findElement(By.xpath("//*[@id='source']")).sendKeys(ukrWord);
+    clickButton();
+    String ExpectedResult = "光榮屬於烏克蘭！";
+    Thread.sleep(3000);
+    Assert.assertEquals (ExpectedResult, getTextRightBox());
     Thread.sleep(3000);
 
  //???????????????????????????????????????????????????????????????????????????????????

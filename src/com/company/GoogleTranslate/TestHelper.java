@@ -19,6 +19,7 @@ public class TestHelper {
         dr = new ChromeDriver(); //запускает драйвер
         dr.manage().window().maximize();//на весь экран открыть браузер
         dr.get("https://translate.google.com.ua");
+
     }
 
 
