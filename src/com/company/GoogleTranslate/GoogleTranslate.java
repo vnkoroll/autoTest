@@ -103,6 +103,7 @@ public void test6 () throws InterruptedException {
 //7. Открьій ссьілку https://translate.google.com/#auto/en/Hello, проверить что слева Hello, справа перевод.
 @Test
 public void test7 () throws InterruptedException {
+
 /////////////////////////////////////////////////////////////////////
     Thread.sleep(2000);
 

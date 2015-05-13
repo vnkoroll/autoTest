@@ -1,9 +1,5 @@
 package com.company;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-
-import javax.xml.soap.SOAPPart;
-
 /**
  if and else
  */
