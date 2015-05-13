@@ -16,6 +16,8 @@ public class xpatch {
     //title[text()='hi']/following::shell[1]
  //tr[2]/td/input
  //div[contains(@class, 'jfk-button')] - если много классов и они постоянно меняются
+
+
  */
 
 }
