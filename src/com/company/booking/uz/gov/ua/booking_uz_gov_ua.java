@@ -6,7 +6,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -26,19 +25,9 @@ public class booking_uz_gov_ua {
 
 @Test
 public void test2 () throws InterruptedException {
-    //from
-    TestHelper.dr.findElement(By.xpath("//div[@id='station_from']/input")).sendKeys("Кие");
-    Thread.sleep(1000);
-    TestHelper.dr.findElement(By.xpath("//div[@id='station_from']/input")).sendKeys(Keys.ARROW_DOWN);
-    TestHelper.dr.findElement(By.xpath("//div[@id='station_from']/input")).sendKeys(Keys.ENTER);
-    Thread.sleep(1000);
+    UzPage.from("Киев");  //ввести откуда Киев
+    UzPage.to("Ивано-Франковск");  //ввести куда Ивано-Франковск
 
-    //to
-    TestHelper.dr.findElement(By.xpath("//div[@id='station_till']/input")).sendKeys("Ивано-Ф");
-    Thread.sleep(1000);
-    TestHelper.dr.findElement(By.xpath("//div[@id='station_till']/input")).sendKeys(Keys.ARROW_DOWN);
-    TestHelper.dr.findElement(By.xpath("//div[@id='station_till']/input")).sendKeys(Keys.ENTER);
-    Thread.sleep(1000);
 
     //select date
     TestHelper.dr.findElement(By.xpath("//div[@class='options']/div/label[1]/input")).click();
@@ -48,7 +37,7 @@ public void test2 () throws InterruptedException {
 
     //button
     TestHelper.dr.findElement(By.xpath("//button[@name='search']")).click();
-    Thread.sleep(3000);
+    Thread.sleep(1000);
 
     //смотрим что  у нас 2 результата
     TestHelper.dr.findElement(By.xpath("//*[@class='vToolsDataTableRow2']//a[text()='043 К']")).isDisplayed();
@@ -60,6 +49,16 @@ public void test2 () throws InterruptedException {
     Thread.sleep(1000);
     //закрываем окно
     TestHelper.dr.findElement(By.xpath("//div[@class='vToolsPopupHeader']/a[@title='закрыть']")).click();
+    Thread.sleep(1000);
+
+    //выбираем напротив 043К купе
+    TestHelper.dr.findElement(By.xpath("//div[@title='Купе']/button")).click();
+    Thread.sleep(2000);
+    //выбираем напротив 6 вагон
+    TestHelper.dr.findElement(By.xpath("//*[@class='coaches']/a[text()='6']")).click();
+    Thread.sleep(2000);
+    //выбираем напротив 35 место
+    TestHelper.dr.findElement(By.xpath("//*[@id='places']//span[text()='35']")).click();
     Thread.sleep(1000);
 }
 
